@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 const ROWS = [
   {
-    title: "AI Adoption",
-    body: "Move from PoC to production AI — with the data foundation, MLOps discipline, and governance that hold up under audit. Skip the AI theater. Build what actually ships.",
+    title: "Enterprise AI Harness",
+    body: "Deploy a purpose-built AI harness: the central operating layer through which your organization interacts with AI. Architected for flexibility rather than lock-in, so the harness serves your business regardless of which models or tools are underneath it.",
     linkLabel: "Request a Data Readiness Workshop →",
     visual: "Drop AI capability visual",
     imageFirst: false,

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const CAPABILITIES = [
   {
-    title: "AI Adoption",
+    title: "Enterprise AI Harness",
     body: "Move from PoC to production AI — with the data foundation, MLOps discipline, and governance that hold up under audit.",
   },
   {
@@ -67,7 +67,7 @@ export default function Home() {
             Introducing Redapt AI
           </div>
           <h1 className="mx-auto mb-6 max-w-[900px] text-[38px] font-extrabold leading-[1.1] tracking-[-0.03em] text-heading sm:text-[48px] md:text-[58px] lg:text-[66px] lg:leading-[1.06]">
-            AI adoption that holds up under audit — and actually ships.
+            Building AI that works securely, continuously, and on solid ground.
           </h1>
           <p className="mx-auto mb-10 max-w-[620px] text-lg leading-relaxed text-ink-muted">
             You're making AI, cloud, and security decisions that need to work for the next
