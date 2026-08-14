@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
+
+  /* Charcoal — body text and default UI chrome (redapt-color-guidelines.md) */
+  --color-ink: #333333;
+  --color-ink-muted: #5b6570;
+  --color-ink-faint: #99a2ab;
+  --color-ink-soft: #7a828b;
+  --color-quote: #3a424b;
+  --color-partner: #b4bbc2;
+
+  /* Deep Blue — headings, section accents, secondary buttons/links */
+  --color-heading: #00576f;
+  --color-heading-hover: color-mix(in srgb, #00576f 85%, black);
+
+  /* Green — primary CTAs and the brand mark */
+  --color-brand: #58ba71;
+  --color-brand-hover: color-mix(in srgb, #58ba71 90%, black);
+
+  /* Light Green — secondary accent, used sparingly for hover states / tags / icon tints */
+  --color-accent-light: #a9dd78;
+
+  /* Section backgrounds */
+  --color-bg-tint: color-mix(in srgb, #a9dd78 8%, white);
+  --color-bg-dark: #00576f;
+
+  /* Badge / icon-swatch tint */
+  --color-tint-bg: color-mix(in srgb, #a9dd78 16%, white);
+  --color-tint-border: color-mix(in srgb, #a9dd78 55%, white);
+
+  /* Neutral hairlines, derived from Charcoal */
+  --color-line: rgba(51, 51, 51, 0.08);
+  --color-line-soft: rgba(51, 51, 51, 0.06);
+  --color-line-strong: rgba(51, 51, 51, 0.15);
+}
+
+::selection {
+  background: #58ba71;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* scroll-reveal: fade + slide up on intersection, one-shot */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
