@@ -25,7 +25,7 @@ export default function StatsBand({ stats = STATS }: StatsBandProps) {
             <div className="text-[36px] font-extrabold text-accent-light md:text-[46px]">
               {stat.value}
             </div>
-            <div className="mt-2 text-sm text-ink-faint">{stat.caption}</div>
+            <div className="mt-2 text-sm text-white">{stat.caption}</div>
           </div>
         ))}
       </Reveal>

@@ -5,32 +5,46 @@ import ImagePlaceholder from "../components/ImagePlaceholder";
 import PartnerStrip from "../components/PartnerStrip";
 import StatsBand from "../components/StatsBand";
 import CtaBand from "../components/CtaBand";
+import {
+  SparkleIcon,
+  SlidersIcon,
+  ShieldCheckIcon,
+  WorkflowIcon,
+  UserCogIcon,
+  ActivityIcon,
+} from "../components/CapabilityIcons";
 import { Link } from "react-router-dom";
 
 const CAPABILITIES = [
   {
     title: "Enterprise AI Harness",
     body: "Move from PoC to production AI — with the data foundation, MLOps discipline, and governance that hold up under audit.",
+    icon: <SparkleIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Data & Analytics",
-    body: "Lakehouse builds, governance frameworks, and AI-ready data estates — built where your data actually lives.",
+    title: "Model Flexibility and Token Optimization",
+    body: "Your AI harness is model-agnostic by design. As the LLM landscape evolves, you can swap, blend, or upgrade models without rebuilding. This keeps cost under control and ensures you're never stranded on an aging stack.",
+    icon: <SlidersIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Cybersecurity",
-    body: "Security that covers AI workloads and the data behind them — audited, tested, and accountable to one team.",
+    title: "Data Security and Client Information Protection",
+    body: "Sensitive client data stays isolated and governed by design, not as an afterthought. We architect data boundaries, access controls, and audit trails so your organization can put real information into the harness with confidence.",
+    icon: <ShieldCheckIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Cloud Adoption & Modernization",
-    body: "Hyperscaler-grade migration, application modernization, and platform engineering across AWS, Azure, and GCP.",
+    title: "Agentic Workflow Automation",
+    body: "AI agents that take action across enterprise systems, not just answer questions. We design, build, and deploy agentic workflows that automate complex processes, surface decisions at the right moment, and operate reliably at scale.",
+    icon: <WorkflowIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Datacenter Infrastructure",
-    body: "On-prem and hybrid infrastructure with global logistics — from GPU buildouts to modernization, deployed where you need it.",
+    title: "Forward-Deployed Engineers",
+    body: "We don't hand off and walk away. Redapt engineers embed in your operations on an ongoing basis: running workshops, building team capability, and ensuring your organization is extracting real value from the investment. ROI is measured, not assumed.",
+    icon: <UserCogIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Managed Cloud & FinOps",
-    body: "Governance-first cloud operations with measurable cost discipline — visibility into spend, and the structure to control it.",
+    title: "Managed AI Operations",
+    body: "Agentic systems require ongoing attention. We continuously monitor cost, security, and performance so issues get caught early and the system stays healthy over time. This is a commitment, not a handoff.",
+    icon: <ActivityIcon className="h-5 w-5 text-heading" />,
   },
 ];
 
@@ -113,7 +127,7 @@ export default function Home() {
                   to="/capabilities"
                   className="group block h-full rounded-2xl border border-line bg-white p-7 no-underline transition-[transform,border-color] duration-200 hover:-translate-y-1 hover:border-accent-light"
                 >
-                  <IconSwatch className="mb-5" />
+                  <IconSwatch className="mb-5" icon={cap.icon} />
                   <h3 className="mb-2.5 text-lg font-bold text-heading">{cap.title}</h3>
                   <p className="text-[15px] leading-relaxed text-ink-muted">{cap.body}</p>
                 </Link>
@@ -147,7 +161,7 @@ export default function Home() {
       </section>
 
       <CtaBand
-        heading="Get to know us. Decide for yourself."
+        heading="AI-ready infrastructure, built on every layer of the stack."
         body="Already know what you need? Request an Architecture Review, Security Resilience Audit, or Data Readiness Workshop."
         tinted
       />

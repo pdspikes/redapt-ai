@@ -11,6 +11,32 @@ const PROOF_STATS = [
   { value: "Years", caption: "Average client relationship length" },
 ];
 
+const OUTCOMES = [
+  "A secure AI harness your team can trust with real client and business data",
+  "Model flexibility that protects your investment as the AI landscape evolves",
+  "Measurable ROI tracked by engineers embedded in your operations",
+  "Teams that are trained, enabled, and actually using the AI you've built",
+  "Continuous cost and security monitoring across all agentic systems",
+  "A long-term operations partner, not a one-time build engagement",
+];
+
+function CheckIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M8.5 12.5l2.2 2.2 4.8-5.4" />
+    </svg>
+  );
+}
+
 const STORIES = [
   {
     quote:
@@ -48,13 +74,41 @@ export default function Proof() {
             Proof
           </p>
           <h1 className="mb-5 text-[34px] font-extrabold leading-[1.1] tracking-[-0.03em] text-heading sm:text-[42px] md:text-[52px]">
-            Get to know us. Decide for yourself.
+            AI-ready infrastructure, built on every layer of the stack.
           </h1>
           <p className="mx-auto max-w-[620px] text-lg leading-relaxed text-ink-muted">
-            Most Redapt customers remain with us for years, some for decades. Here's why they
-            stay.
+            The applied AI layer becomes significantly more effective once the foundational
+            environment is properly structured. Redapt brings infrastructure, cloud, and data
+            expertise that most AI engagements require, but rarely arrive with.
           </p>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-[1200px] px-6 pb-20 pt-4 md:px-16">
+        <Reveal className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div>
+            <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.08em] text-heading">
+              Customer Outcomes
+            </p>
+            <ul className="flex flex-col gap-4">
+              {OUTCOMES.map((outcome) => (
+                <li key={outcome} className="flex items-start gap-3">
+                  <CheckIcon />
+                  <span className="text-base font-bold leading-relaxed text-ink-muted">{outcome}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl bg-[#003E47] p-8 md:p-10">
+            <h2 className="mb-4 text-2xl font-bold text-[#A9DD78]">Why Redapt</h2>
+            <p className="text-base leading-relaxed text-white">
+              Redapt engineers don't hand off and disappear. We listen first, design for
+              optionality so your AI harness isn't locked to any single model or vendor, and
+              stay accountable through the operations we help you run. We measure what we
+              build. We're there when it matters.
+            </p>
+          </div>
+        </Reveal>
       </section>
 
       <StatsBand stats={PROOF_STATS} />

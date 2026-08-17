@@ -2,6 +2,14 @@ import Reveal from "../components/Reveal";
 import IconSwatch from "../components/IconSwatch";
 import ImagePlaceholder from "../components/ImagePlaceholder";
 import CtaBand from "../components/CtaBand";
+import {
+  SparkleIcon,
+  SlidersIcon,
+  ShieldCheckIcon,
+  WorkflowIcon,
+  UserCogIcon,
+  ActivityIcon,
+} from "../components/CapabilityIcons";
 import { Link } from "react-router-dom";
 
 const ROWS = [
@@ -11,41 +19,47 @@ const ROWS = [
     linkLabel: "Request a Data Readiness Workshop →",
     visual: "Drop AI capability visual",
     imageFirst: false,
+    icon: <SparkleIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Data & Analytics",
+    title: "Model Flexibility and Token Optimization",
     body: "Lakehouse builds, governance frameworks, and AI-ready data estates. Built where your data lives — not where the vendor wants you.",
     linkLabel: "Request a Data Readiness Workshop →",
     visual: "Drop data/analytics visual",
     imageFirst: true,
+    icon: <SlidersIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Cybersecurity",
+    title: "Data Security and Client Information Protection",
     body: "Your security must hold up under audit and under attack. From security leadership to 24x7 threat operations and tool consolidation — one team accountable for the program, not just the deployment.",
     linkLabel: "Explore Cybersecurity →",
     visual: "Drop cybersecurity visual",
     imageFirst: false,
+    icon: <ShieldCheckIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Cloud Adoption & Modernization",
+    title: "Agentic Workflow Automation",
     body: "Hyperscaler-grade migration, application modernization, and platform engineering across AWS, Azure, and Google Cloud. Designed for optionality, not lock-in.",
     linkLabel: "Request an Architecture Review →",
     visual: "Drop cloud adoption visual",
     imageFirst: true,
+    icon: <WorkflowIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Datacenter Infrastructure & Logistics",
-    body: "On-prem and hybrid infrastructure, with global logistics to 40+ countries. From NEO Cloud GPU buildouts to enterprise data center modernization — production-ready, deployed where you need it.",
+    title: "Forward-Deployed Engineers",
+    body: "We don't hand off and walk away. Redapt engineers embed in your operations on an ongoing basis: running workshops, building team capability, and ensuring your organization is extracting real value from the investment. ROI is measured, not assumed.",
     linkLabel: "Request an Architecture Review →",
     visual: "Drop datacenter visual",
     imageFirst: false,
+    icon: <UserCogIcon className="h-5 w-5 text-heading" />,
   },
   {
-    title: "Managed Cloud & FinOps",
+    title: "Managed AI Operations",
     body: "Governance-first cloud operations with measurable cost discipline. Your team gets visibility into where spend is going — and the structure to keep it under control.",
     linkLabel: "Request a Discovery Call →",
     visual: "Drop FinOps visual",
     imageFirst: true,
+    icon: <ActivityIcon className="h-5 w-5 text-heading" />,
   },
 ];
 
@@ -83,7 +97,7 @@ export default function Capabilities() {
             }`}
           >
             <div className={row.imageFirst ? "order-2 md:order-2" : "order-2 md:order-1"}>
-              <IconSwatch size={44} className="mb-5" />
+              <IconSwatch size={44} className="mb-5" icon={row.icon} />
               <h2 className="mb-3.5 text-2xl font-bold tracking-[-0.01em] text-heading md:text-[28px]">
                 {row.title}
               </h2>

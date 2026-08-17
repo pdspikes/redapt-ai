@@ -108,6 +108,12 @@ export default function Contact() {
               </div>
               <div>
                 <label className="mb-1.5 block text-[13px] font-semibold text-ink">
+                  Title
+                </label>
+                <input type="text" name="title" placeholder="VP Infrastructure" className={inputClasses} />
+              </div>
+              <div>
+                <label className="mb-1.5 block text-[13px] font-semibold text-ink">
                   What are you working through?
                 </label>
                 <textarea

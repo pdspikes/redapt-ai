@@ -24,7 +24,7 @@
 
   /* Section backgrounds */
   --color-bg-tint: color-mix(in srgb, #a9dd78 8%, white);
-  --color-bg-dark: #00576f;
+  --color-bg-dark: #003e47;
 
   /* Badge / icon-swatch tint */
   --color-tint-bg: color-mix(in srgb, #a9dd78 16%, white);

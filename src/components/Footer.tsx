@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
-const CAPABILITY_LINKS = ["Enterprise AI Harness", "Data & Analytics", "Cybersecurity", "Cloud Adoption"];
+const CAPABILITY_LINKS = [
+  "Enterprise AI Harness",
+  "Model Flexibility and Token Optimization",
+  "Data Security and Client Information Protection",
+  "Agentic Workflow Automation",
+];
 
 export default function Footer() {
   return (
