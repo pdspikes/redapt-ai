@@ -37,24 +37,27 @@ function CheckIcon() {
   );
 }
 
-const STORIES = [
+const STORIES: { quote: string; name: string; org: string; image?: string }[] = [
   {
     quote:
       "Redapt didn't hand us a strategy deck — they stayed until our GPU cluster was actually in production.",
     name: "VP Infrastructure",
     org: "Global Financial Services",
+    image: "/customer-1.png",
   },
   {
     quote:
       "Our security program finally has one team accountable end to end, not five vendors pointing fingers.",
     name: "CISO",
     org: "Healthcare Enterprise",
+    image: "/customer-2.png",
   },
   {
     quote:
       "We went from AI pilot to production model in a quarter — with governance our auditors actually accepted.",
     name: "Chief Data Officer",
     org: "Retail & Logistics",
+    image: "/customer-3.png",
   },
 ];
 
@@ -128,7 +131,15 @@ export default function Proof() {
               key={story.name + story.org}
               className="flex flex-col gap-5 rounded-2xl bg-bg-tint p-8"
             >
-              <ImagePlaceholder label="Drop customer photo/logo" className="h-[160px] w-full" rounded="rounded-xl" />
+              {story.image ? (
+                <img
+                  src={story.image}
+                  alt={`${story.name}, ${story.org}`}
+                  className="h-[160px] w-full rounded-xl object-cover"
+                />
+              ) : (
+                <ImagePlaceholder label="Drop customer photo/logo" className="h-[160px] w-full" rounded="rounded-xl" />
+              )}
               <p className="italic leading-relaxed text-quote">"{story.quote}"</p>
               <div>
                 <div className="text-sm font-bold text-ink">{story.name}</div>

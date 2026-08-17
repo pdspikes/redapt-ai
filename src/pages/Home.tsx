@@ -1,7 +1,6 @@
 import Reveal from "../components/Reveal";
 import PillLink from "../components/PillLink";
 import IconSwatch from "../components/IconSwatch";
-import ImagePlaceholder from "../components/ImagePlaceholder";
 import PartnerStrip from "../components/PartnerStrip";
 import StatsBand from "../components/StatsBand";
 import CtaBand from "../components/CtaBand";
@@ -95,11 +94,13 @@ export default function Home() {
             </PillLink>
           </div>
         </div>
-        <Reveal className="relative mt-14 overflow-hidden rounded-[20px] border border-line shadow-[0_40px_100px_rgba(51,51,51,0.12)]">
-          <ImagePlaceholder
-            label="Drop product / architecture screenshot"
-            rounded="rounded-none"
-            className="h-[280px] w-full sm:h-[380px] md:h-[520px]"
+        <Reveal className="relative mx-auto mt-14 max-w-[1000px] overflow-hidden rounded-[20px] border border-line shadow-[0_40px_100px_rgba(51,51,51,0.12)]">
+          <img
+            src="/hero-architecture.png"
+            alt="AI agent architecture: input/perception layer, memory, reasoning core, planning module, external APIs, and action/execution layer"
+            width={1000}
+            height={480}
+            className="block h-auto w-full"
           />
         </Reveal>
       </section>
