@@ -94,7 +94,7 @@ export default function Capabilities() {
             </div>
             <IconSwatch
               size={125}
-              bgClass="bg-[#A9DD78]"
+              bgClass="bg-[#D7F2C5]"
               className="flex-shrink-0 translate-x-[-50px]"
               icon={row.icon}
             />
