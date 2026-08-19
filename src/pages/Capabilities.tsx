@@ -1,6 +1,5 @@
 import Reveal from "../components/Reveal";
 import IconSwatch from "../components/IconSwatch";
-import ImagePlaceholder from "../components/ImagePlaceholder";
 import CtaBand from "../components/CtaBand";
 import {
   SparkleIcon,
@@ -17,48 +16,36 @@ const ROWS = [
     title: "Enterprise AI Harness",
     body: "Deploy a purpose-built AI harness: the central operating layer through which your organization interacts with AI. Architected for flexibility rather than lock-in, so the harness serves your business regardless of which models or tools are underneath it.",
     linkLabel: "Request a Data Readiness Workshop →",
-    visual: "Drop AI capability visual",
-    imageFirst: false,
     icon: <SparkleIcon className="h-5 w-5 text-heading" />,
   },
   {
     title: "Model Flexibility and Token Optimization",
     body: "Lakehouse builds, governance frameworks, and AI-ready data estates. Built where your data lives — not where the vendor wants you.",
     linkLabel: "Request a Data Readiness Workshop →",
-    visual: "Drop data/analytics visual",
-    imageFirst: true,
     icon: <SlidersIcon className="h-5 w-5 text-heading" />,
   },
   {
     title: "Data Security and Client Information Protection",
     body: "Your security must hold up under audit and under attack. From security leadership to 24x7 threat operations and tool consolidation — one team accountable for the program, not just the deployment.",
     linkLabel: "Explore Cybersecurity →",
-    visual: "Drop cybersecurity visual",
-    imageFirst: false,
     icon: <ShieldCheckIcon className="h-5 w-5 text-heading" />,
   },
   {
     title: "Agentic Workflow Automation",
     body: "Hyperscaler-grade migration, application modernization, and platform engineering across AWS, Azure, and Google Cloud. Designed for optionality, not lock-in.",
     linkLabel: "Request an Architecture Review →",
-    visual: "Drop cloud adoption visual",
-    imageFirst: true,
     icon: <WorkflowIcon className="h-5 w-5 text-heading" />,
   },
   {
     title: "Forward-Deployed Engineers",
     body: "We don't hand off and walk away. Redapt engineers embed in your operations on an ongoing basis: running workshops, building team capability, and ensuring your organization is extracting real value from the investment. ROI is measured, not assumed.",
     linkLabel: "Request an Architecture Review →",
-    visual: "Drop datacenter visual",
-    imageFirst: false,
     icon: <UserCogIcon className="h-5 w-5 text-heading" />,
   },
   {
     title: "Managed AI Operations",
     body: "Governance-first cloud operations with measurable cost discipline. Your team gets visibility into where spend is going — and the structure to keep it under control.",
     linkLabel: "Request a Discovery Call →",
-    visual: "Drop FinOps visual",
-    imageFirst: true,
     icon: <ActivityIcon className="h-5 w-5 text-heading" />,
   },
 ];
@@ -92,23 +79,18 @@ export default function Capabilities() {
         {ROWS.map((row, i) => (
           <Reveal
             key={row.title}
-            className={`grid grid-cols-1 items-center gap-8 py-12 md:grid-cols-2 md:gap-14 md:py-14 ${
+            className={`max-w-[640px] py-12 text-left md:py-14 ${
               i < ROWS.length - 1 ? "border-b border-line" : ""
             }`}
           >
-            <div className={row.imageFirst ? "order-2 md:order-2" : "order-2 md:order-1"}>
-              <IconSwatch size={44} className="mb-5" icon={row.icon} />
-              <h2 className="mb-3.5 text-2xl font-bold tracking-[-0.01em] text-heading md:text-[28px]">
-                {row.title}
-              </h2>
-              <p className="mb-5 text-base leading-[1.65] text-ink-muted">{row.body}</p>
-              <Link to="/contact" className="text-[15px] font-bold text-heading no-underline hover:text-heading-hover">
-                {row.linkLabel}
-              </Link>
-            </div>
-            <div className={row.imageFirst ? "order-1 md:order-1" : "order-1 md:order-2"}>
-              <ImagePlaceholder label={row.visual} className="h-[240px] w-full md:h-[320px]" />
-            </div>
+            <IconSwatch size={44} className="mb-5" icon={row.icon} />
+            <h2 className="mb-3.5 text-2xl font-bold tracking-[-0.01em] text-heading md:text-[28px]">
+              {row.title}
+            </h2>
+            <p className="mb-5 text-base leading-[1.65] text-ink-muted">{row.body}</p>
+            <Link to="/contact" className="text-[15px] font-bold text-heading no-underline hover:text-heading-hover">
+              {row.linkLabel}
+            </Link>
           </Reveal>
         ))}
       </section>
