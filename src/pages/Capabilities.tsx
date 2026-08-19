@@ -92,7 +92,12 @@ export default function Capabilities() {
                 {row.linkLabel}
               </Link>
             </div>
-            <IconSwatch size={125} bgClass="bg-[#A9DD78]" className="flex-shrink-0" icon={row.icon} />
+            <IconSwatch
+              size={125}
+              bgClass="bg-[#A9DD78]"
+              className="flex-shrink-0 translate-x-[-50px]"
+              icon={row.icon}
+            />
           </Reveal>
         ))}
       </section>
