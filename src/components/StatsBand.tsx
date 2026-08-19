@@ -8,8 +8,8 @@ interface Stat {
 const STATS: Stat[] = [
   { value: "220+", caption: "Technologists on call" },
   { value: "40+", caption: "Countries served via global logistics" },
-  { value: "Decades", caption: "Of combined enterprise experience" },
-  { value: "Years", caption: "Not projects — most clients stay for years, some decades" },
+  { value: "200+", caption: "Partner engineering certifications" },
+  { value: "30+", caption: "Years of delivering business-critical technology" },
 ];
 
 interface StatsBandProps {

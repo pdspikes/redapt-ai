@@ -20,12 +20,45 @@ const OFFERS = [
 const inputClasses =
   "w-full rounded-lg border border-line-strong bg-white px-3.5 py-3 font-sans text-sm text-ink outline-none transition-colors focus:border-brand";
 
+const NOTIFY_EMAILS = "b.ashkenazy@redapt.com,pspikes@redapt.com";
+const FALLBACK_CONTACT_NOTE =
+  "Something went wrong sending your request. Please try again, or email results@redapt.ai directly.";
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const formId = import.meta.env.VITE_FORMSPREE_FORM_ID;
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+
+    if (!formId) {
+      setError(
+        "This form isn't connected to an email service yet. Please reach us directly at results@redapt.ai in the meantime.",
+      );
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(e.currentTarget),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError(FALLBACK_CONTACT_NOTE);
+      }
+    } catch {
+      setError(FALLBACK_CONTACT_NOTE);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -74,6 +107,8 @@ export default function Contact() {
             </div>
           ) : (
             <form className="flex flex-col gap-4.5" onSubmit={handleSubmit}>
+              <input type="hidden" name="_cc" value={NOTIFY_EMAILS} />
+              <input type="hidden" name="_subject" value="New discovery call request — redapt.ai" />
               <div className="grid grid-cols-2 gap-3.5">
                 <div>
                   <label className="mb-1.5 block text-[13px] font-semibold text-ink">
@@ -122,11 +157,15 @@ export default function Contact() {
                   className={`${inputClasses} min-h-[100px] resize-y`}
                 />
               </div>
+              {error && (
+                <p className="text-[13px] leading-relaxed text-[#B3261E]">{error}</p>
+              )}
               <button
                 type="submit"
-                className="mt-1.5 rounded-full bg-brand px-6 py-4 text-[15px] font-semibold text-white transition-colors hover:bg-brand-hover"
+                disabled={submitting}
+                className="mt-1.5 rounded-full bg-brand px-6 py-4 text-[15px] font-semibold text-white transition-colors hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Request a Discovery Call
+                {submitting ? "Sending…" : "Request a Discovery Call"}
               </button>
             </form>
           )}

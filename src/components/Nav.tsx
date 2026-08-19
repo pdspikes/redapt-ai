@@ -5,7 +5,7 @@ import Logo from "./Logo";
 const LINKS = [
   { to: "/", label: "Home" },
   { to: "/capabilities", label: "Capabilities" },
-  { to: "/proof", label: "Proof" },
+  { to: "/proof", label: "Outcomes" },
   { to: "/contact", label: "Contact" },
 ];
 

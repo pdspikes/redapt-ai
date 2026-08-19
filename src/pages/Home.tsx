@@ -18,32 +18,32 @@ const CAPABILITIES = [
   {
     title: "Enterprise AI Harness",
     body: "Move from PoC to production AI — with the data foundation, MLOps discipline, and governance that hold up under audit.",
-    icon: <SparkleIcon className="h-5 w-5 text-heading" />,
+    icon: <SparkleIcon className="h-7 w-7 text-heading" />,
   },
   {
     title: "Model Flexibility and Token Optimization",
     body: "Your AI harness is model-agnostic by design. As the LLM landscape evolves, you can swap, blend, or upgrade models without rebuilding. This keeps cost under control and ensures you're never stranded on an aging stack.",
-    icon: <SlidersIcon className="h-5 w-5 text-heading" />,
+    icon: <SlidersIcon className="h-7 w-7 text-heading" />,
   },
   {
     title: "Data Security and Client Information Protection",
     body: "Sensitive client data stays isolated and governed by design, not as an afterthought. We architect data boundaries, access controls, and audit trails so your organization can put real information into the harness with confidence.",
-    icon: <ShieldCheckIcon className="h-5 w-5 text-heading" />,
+    icon: <ShieldCheckIcon className="h-7 w-7 text-heading" />,
   },
   {
     title: "Agentic Workflow Automation",
     body: "AI agents that take action across enterprise systems, not just answer questions. We design, build, and deploy agentic workflows that automate complex processes, surface decisions at the right moment, and operate reliably at scale.",
-    icon: <WorkflowIcon className="h-5 w-5 text-heading" />,
+    icon: <WorkflowIcon className="h-7 w-7 text-heading" />,
   },
   {
     title: "Forward-Deployed Engineers",
     body: "We don't hand off and walk away. Redapt engineers embed in your operations on an ongoing basis: running workshops, building team capability, and ensuring your organization is extracting real value from the investment. ROI is measured, not assumed.",
-    icon: <UserCogIcon className="h-5 w-5 text-heading" />,
+    icon: <UserCogIcon className="h-7 w-7 text-heading" />,
   },
   {
     title: "Managed AI Operations",
     body: "Agentic systems require ongoing attention. We continuously monitor cost, security, and performance so issues get caught early and the system stays healthy over time. This is a commitment, not a handoff.",
-    icon: <ActivityIcon className="h-5 w-5 text-heading" />,
+    icon: <ActivityIcon className="h-7 w-7 text-heading" />,
   },
 ];
 
@@ -94,14 +94,20 @@ export default function Home() {
             </PillLink>
           </div>
         </div>
-        <Reveal className="relative mx-auto mt-14 max-w-[1000px] overflow-hidden rounded-[20px] border border-line shadow-[0_40px_100px_rgba(51,51,51,0.12)]">
-          <img
-            src="/hero-architecture.png"
-            alt="AI agent architecture: input/perception layer, memory, reasoning core, planning module, external APIs, and action/execution layer"
-            width={1000}
-            height={480}
+        <Reveal className="relative mt-14 w-screen mx-[calc(50%_-_50vw)] overflow-hidden rounded-[20px] border border-line">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/hero-agentic-workflow-poster.jpg"
+            width={1440}
+            height={696}
             className="block h-auto w-full"
-          />
+            aria-label="Agentic AI workflow demonstration"
+          >
+            <source src="/hero-agentic-workflow.mp4" type="video/mp4" />
+          </video>
         </Reveal>
       </section>
 
@@ -128,7 +134,7 @@ export default function Home() {
                   to="/capabilities"
                   className="group block h-full rounded-2xl border border-line bg-white p-7 no-underline transition-[transform,border-color] duration-200 hover:-translate-y-1 hover:border-accent-light"
                 >
-                  <IconSwatch className="mb-5" icon={cap.icon} />
+                  <IconSwatch className="mb-5" bgClass="bg-[#A9DD78]" icon={cap.icon} />
                   <h3 className="mb-2.5 text-lg font-bold text-heading">{cap.title}</h3>
                   <p className="text-[15px] leading-relaxed text-ink-muted">{cap.body}</p>
                 </Link>

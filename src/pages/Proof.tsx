@@ -1,5 +1,4 @@
 import Reveal from "../components/Reveal";
-import ImagePlaceholder from "../components/ImagePlaceholder";
 import StatsBand from "../components/StatsBand";
 import PartnerStrip from "../components/PartnerStrip";
 import CtaBand from "../components/CtaBand";
@@ -7,8 +6,8 @@ import CtaBand from "../components/CtaBand";
 const PROOF_STATS = [
   { value: "220+", caption: "Technologists on call" },
   { value: "40+", caption: "Countries served via global logistics" },
-  { value: "Decades", caption: "Of combined enterprise experience" },
-  { value: "Years", caption: "Average client relationship length" },
+  { value: "200+", caption: "Partner engineering certifications" },
+  { value: "30+", caption: "Years of delivering business-critical technology" },
 ];
 
 const OUTCOMES = [
@@ -16,8 +15,6 @@ const OUTCOMES = [
   "Model flexibility that protects your investment as the AI landscape evolves",
   "Measurable ROI tracked by engineers embedded in your operations",
   "Teams that are trained, enabled, and actually using the AI you've built",
-  "Continuous cost and security monitoring across all agentic systems",
-  "A long-term operations partner, not a one-time build engagement",
 ];
 
 function CheckIcon() {
@@ -37,27 +34,24 @@ function CheckIcon() {
   );
 }
 
-const STORIES: { quote: string; name: string; org: string; image?: string }[] = [
+const STORIES = [
   {
     quote:
       "Redapt didn't hand us a strategy deck — they stayed until our GPU cluster was actually in production.",
     name: "VP Infrastructure",
     org: "Global Financial Services",
-    image: "/customer-1.png",
   },
   {
     quote:
       "Our security program finally has one team accountable end to end, not five vendors pointing fingers.",
     name: "CISO",
     org: "Healthcare Enterprise",
-    image: "/customer-2.png",
   },
   {
     quote:
       "We went from AI pilot to production model in a quarter — with governance our auditors actually accepted.",
     name: "Chief Data Officer",
     org: "Retail & Logistics",
-    image: "/customer-3.png",
   },
 ];
 
@@ -131,16 +125,7 @@ export default function Proof() {
               key={story.name + story.org}
               className="flex flex-col gap-5 rounded-2xl bg-bg-tint p-8"
             >
-              {story.image ? (
-                <img
-                  src={story.image}
-                  alt={`${story.name}, ${story.org}`}
-                  className="h-[160px] w-full rounded-xl object-cover"
-                />
-              ) : (
-                <ImagePlaceholder label="Drop customer photo/logo" className="h-[160px] w-full" rounded="rounded-xl" />
-              )}
-              <p className="italic leading-relaxed text-quote">"{story.quote}"</p>
+              <p className="text-[17.6px] italic leading-relaxed text-bg-dark">"{story.quote}"</p>
               <div>
                 <div className="text-sm font-bold text-ink">{story.name}</div>
                 <div className="text-[13px] text-ink-faint">{story.org}</div>

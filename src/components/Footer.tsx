@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="mb-4 text-[13px] font-bold text-ink">Company</div>
           <div className="flex flex-col gap-2.5">
             <Link to="/proof" className="text-sm text-ink-muted no-underline hover:text-ink">
-              Proof
+              Outcomes
             </Link>
             <Link to="/contact" className="text-sm text-ink-muted no-underline hover:text-ink">
               Contact

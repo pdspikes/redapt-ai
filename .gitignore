@@ -26,3 +26,8 @@ dist-ssr
 # Claude Code local/session state (machine-specific)
 .claude/settings.local.json
 .claude/scheduled_tasks.lock
+
+# Environment variables
+.env
+.env.*
+!.env.example
