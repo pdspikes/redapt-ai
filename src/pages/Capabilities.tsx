@@ -16,37 +16,37 @@ const ROWS = [
     title: "Enterprise AI Harness",
     body: "Deploy a purpose-built AI harness: the central operating layer through which your organization interacts with AI. Architected for flexibility rather than lock-in, so the harness serves your business regardless of which models or tools are underneath it.",
     linkLabel: "Request a Data Readiness Workshop →",
-    icon: <SparkleIcon className="h-5 w-5 text-heading" />,
+    icon: <SparkleIcon className="h-[90px] w-[90px] text-heading" />,
   },
   {
     title: "Model Flexibility and Token Optimization",
     body: "Lakehouse builds, governance frameworks, and AI-ready data estates. Built where your data lives — not where the vendor wants you.",
     linkLabel: "Request a Data Readiness Workshop →",
-    icon: <SlidersIcon className="h-5 w-5 text-heading" />,
+    icon: <SlidersIcon className="h-[90px] w-[90px] text-heading" />,
   },
   {
     title: "Data Security and Client Information Protection",
     body: "Your security must hold up under audit and under attack. From security leadership to 24x7 threat operations and tool consolidation — one team accountable for the program, not just the deployment.",
     linkLabel: "Explore Cybersecurity →",
-    icon: <ShieldCheckIcon className="h-5 w-5 text-heading" />,
+    icon: <ShieldCheckIcon className="h-[90px] w-[90px] text-heading" />,
   },
   {
     title: "Agentic Workflow Automation",
     body: "Hyperscaler-grade migration, application modernization, and platform engineering across AWS, Azure, and Google Cloud. Designed for optionality, not lock-in.",
     linkLabel: "Request an Architecture Review →",
-    icon: <WorkflowIcon className="h-5 w-5 text-heading" />,
+    icon: <WorkflowIcon className="h-[90px] w-[90px] text-heading" />,
   },
   {
     title: "Forward-Deployed Engineers",
     body: "We don't hand off and walk away. Redapt engineers embed in your operations on an ongoing basis: running workshops, building team capability, and ensuring your organization is extracting real value from the investment. ROI is measured, not assumed.",
     linkLabel: "Request an Architecture Review →",
-    icon: <UserCogIcon className="h-5 w-5 text-heading" />,
+    icon: <UserCogIcon className="h-[90px] w-[90px] text-heading" />,
   },
   {
     title: "Managed AI Operations",
     body: "Governance-first cloud operations with measurable cost discipline. Your team gets visibility into where spend is going — and the structure to keep it under control.",
     linkLabel: "Request a Discovery Call →",
-    icon: <ActivityIcon className="h-5 w-5 text-heading" />,
+    icon: <ActivityIcon className="h-[90px] w-[90px] text-heading" />,
   },
 ];
 
@@ -79,18 +79,20 @@ export default function Capabilities() {
         {ROWS.map((row, i) => (
           <Reveal
             key={row.title}
-            className={`max-w-[640px] py-12 text-left md:py-14 ${
+            className={`flex flex-col items-start justify-between gap-8 py-12 sm:flex-row sm:items-center md:py-14 ${
               i < ROWS.length - 1 ? "border-b border-line" : ""
             }`}
           >
-            <IconSwatch size={44} className="mb-5" icon={row.icon} />
-            <h2 className="mb-3.5 text-2xl font-bold tracking-[-0.01em] text-heading md:text-[28px]">
-              {row.title}
-            </h2>
-            <p className="mb-5 text-base leading-[1.65] text-ink-muted">{row.body}</p>
-            <Link to="/contact" className="text-[15px] font-bold text-heading no-underline hover:text-heading-hover">
-              {row.linkLabel}
-            </Link>
+            <div className="max-w-[640px] text-left">
+              <h2 className="mb-3.5 text-2xl font-bold tracking-[-0.01em] text-heading md:text-[28px]">
+                {row.title}
+              </h2>
+              <p className="mb-5 text-base leading-[1.65] text-ink-muted">{row.body}</p>
+              <Link to="/contact" className="text-[15px] font-bold text-heading no-underline hover:text-heading-hover">
+                {row.linkLabel}
+              </Link>
+            </div>
+            <IconSwatch size={125} bgClass="bg-[#A9DD78]" className="flex-shrink-0" icon={row.icon} />
           </Reveal>
         ))}
       </section>
