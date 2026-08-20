@@ -100,7 +100,7 @@ export default function Contact() {
           {submitted ? (
             <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
               <div className="mb-4 h-10 w-10 rounded-full bg-tint-bg" />
-              <h2 className="mb-2 text-xl font-bold text-heading">Thanks — we got it.</h2>
+              <h2 className="mb-2 text-xl font-bold text-heading">Thanks, we got it.</h2>
               <p className="text-[15px] text-ink-muted">
                 Someone from our team will follow up shortly to schedule your discovery call.
               </p>
@@ -108,7 +108,7 @@ export default function Contact() {
           ) : (
             <form className="flex flex-col gap-4.5" onSubmit={handleSubmit}>
               <input type="hidden" name="_cc" value={NOTIFY_EMAILS} />
-              <input type="hidden" name="_subject" value="New discovery call request — redapt.ai" />
+              <input type="hidden" name="_subject" value="New discovery call request: redapt.ai" />
               <div className="grid grid-cols-2 gap-3.5">
                 <div>
                   <label className="mb-1.5 block text-[13px] font-semibold text-ink">

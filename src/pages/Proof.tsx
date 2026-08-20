@@ -37,7 +37,7 @@ function CheckIcon() {
 const STORIES = [
   {
     quote:
-      "Redapt didn't hand us a strategy deck — they stayed until our GPU cluster was actually in production.",
+      "Redapt didn't hand us a strategy deck. They stayed until our GPU cluster was actually in production.",
     name: "VP Infrastructure",
     org: "Global Financial Services",
   },
@@ -49,7 +49,7 @@ const STORIES = [
   },
   {
     quote:
-      "We went from AI pilot to production model in a quarter — with governance our auditors actually accepted.",
+      "We went from AI pilot to production model in a quarter, with governance our auditors actually accepted.",
     name: "Chief Data Officer",
     org: "Retail & Logistics",
   },
@@ -68,7 +68,7 @@ export default function Proof() {
         />
         <div className="relative">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.08em] text-heading">
-            Proof
+            Outcomes
           </p>
           <h1 className="mb-5 text-[34px] font-extrabold leading-[1.1] tracking-[-0.03em] text-heading sm:text-[42px] md:text-[52px]">
             AI-ready infrastructure, built on every layer of the stack.

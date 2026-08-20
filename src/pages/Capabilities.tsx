@@ -20,13 +20,13 @@ const ROWS = [
   },
   {
     title: "Model Flexibility and Token Optimization",
-    body: "Lakehouse builds, governance frameworks, and AI-ready data estates. Built where your data lives — not where the vendor wants you.",
+    body: "Lakehouse builds, governance frameworks, and AI-ready data estates. Built where your data lives, not where the vendor wants you.",
     linkLabel: "Request a Data Readiness Workshop →",
     icon: <SlidersIcon className="h-[90px] w-[90px] text-heading" />,
   },
   {
     title: "Data Security and Client Information Protection",
-    body: "Your security must hold up under audit and under attack. From security leadership to 24x7 threat operations and tool consolidation — one team accountable for the program, not just the deployment.",
+    body: "Your security must hold up under audit and under attack. From security leadership to 24x7 threat operations and tool consolidation, one team is accountable for the program, not just the deployment.",
     linkLabel: "Explore Cybersecurity →",
     icon: <ShieldCheckIcon className="h-[90px] w-[90px] text-heading" />,
   },
@@ -44,7 +44,7 @@ const ROWS = [
   },
   {
     title: "Managed AI Operations",
-    body: "Governance-first cloud operations with measurable cost discipline. Your team gets visibility into where spend is going — and the structure to keep it under control.",
+    body: "Governance-first cloud operations with measurable cost discipline. Your team gets visibility into where spend is going, and the structure to keep it under control.",
     linkLabel: "Request a Discovery Call →",
     icon: <ActivityIcon className="h-[90px] w-[90px] text-heading" />,
   },
@@ -53,7 +53,7 @@ const ROWS = [
 export default function Capabilities() {
   return (
     <>
-      <section className="relative mx-auto max-w-[900px] px-6 pb-16 pt-20 text-center md:px-16">
+      <section className="relative mx-auto max-w-[1100px] px-6 pb-16 pt-20 text-center md:px-16">
         <div
           className="pointer-events-none absolute left-1/2 top-[-40px] h-[320px] w-[90%] max-w-[800px] -translate-x-1/2 md:h-[400px]"
           style={{
@@ -66,11 +66,11 @@ export default function Capabilities() {
             Capabilities
           </p>
           <h1 className="mb-5 text-[34px] font-extrabold leading-[1.1] tracking-[-0.03em] text-heading sm:text-[42px] md:text-[52px]">
-            Six capabilities. One accountable partner.
+            Everything production AI requires, from one accountable partner.
           </h1>
           <p className="mx-auto max-w-[620px] text-lg leading-relaxed text-ink-muted">
-            Every engagement starts with the capability that matches your next decision — and
-            stays with the same team from architecture through operations.
+            Start with the capability that matches your next decision. The same team stays with
+            you from architecture through operations.
           </p>
         </div>
       </section>
