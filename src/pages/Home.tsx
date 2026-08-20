@@ -94,19 +94,13 @@ export default function Home() {
           </div>
         </div>
         <Reveal className="relative mx-auto mt-14 w-[70vw] overflow-hidden rounded-[20px] border border-line">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="/hero-agentic-workflow-poster.jpg"
-            width={1440}
-            height={696}
+          <img
+            src="/hero-agentic-workflow-diagram.jpg"
+            alt="How an agentic AI workflow works: a user request flows into the agentic core, which plans, acts, and observes in a loop using tools/APIs and memory, before delivering a response."
+            width={720}
+            height={349}
             className="block h-auto w-full"
-            aria-label="Agentic AI workflow demonstration"
-          >
-            <source src="/hero-agentic-workflow.mp4" type="video/mp4" />
-          </video>
+          />
         </Reveal>
       </section>
 
