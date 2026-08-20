@@ -94,7 +94,7 @@ export default function Home() {
             </PillLink>
           </div>
         </div>
-        <Reveal className="relative mt-14 w-screen mx-[calc(50%_-_50vw)] overflow-hidden rounded-[20px] border border-line">
+        <Reveal className="relative mx-auto mt-14 w-[70vw] overflow-hidden rounded-[20px] border border-line">
           <video
             autoPlay
             loop
