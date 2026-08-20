@@ -17,7 +17,7 @@ export default function Footer() {
             <Logo />
           </div>
           <p className="max-w-[280px] text-sm leading-relaxed text-ink-soft">
-            An end-to-end technology partner bringing clarity — and production AI — to complex
+            An end-to-end technology partner bringing clarity and production AI to complex
             enterprise environments.
           </p>
         </div>

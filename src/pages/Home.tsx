@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 const CAPABILITIES = [
   {
     title: "Enterprise AI Harness",
-    body: "Move from PoC to production AI — with the data foundation, MLOps discipline, and governance that hold up under audit.",
+    body: "The operating layer that takes you to production AI with the data foundation, and governance that hold up under audit. We build it around the platforms and infrastructure you already run so it evolves with your environment instead of locking you into ours.",
     icon: <SparkleIcon className="h-7 w-7 text-heading" />,
   },
   {
@@ -49,16 +49,16 @@ const CAPABILITIES = [
 
 const PROCESS = [
   {
-    step: "01 — Discover",
-    body: "You bring a business challenge. We walk your environment, constraints, and stakeholders. You leave with a defensible path forward — not a strategy deck.",
+    step: "01. Discover",
+    body: "You bring a business challenge. We walk your environment, constraints, and stakeholders. You leave with a defensible path forward, not a strategy deck.",
   },
   {
-    step: "02 — Deliver",
-    body: "Your decisions become a production system. Security woven in from day one, multi-platform by design. The outcome you partnered for — not slides about what could happen.",
+    step: "02. Deliver",
+    body: "Your decisions become a production system. Security woven in from day one, multi-platform by design. The outcome you partnered for, not slides about what could happen.",
   },
   {
-    step: "03 — Operate Independently",
-    body: "Your team owns the platform, with the operating model to run it. We're on call when you need us — and ready for the next high-impact project.",
+    step: "03. Operate Independently",
+    body: "Your team owns the platform, with the operating model to run it. We're on call when you need us, and ready for the next high-impact project.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function Home() {
             Enterprise AI, Built to Last
           </div>
           <h1 className="mx-auto mb-6 max-w-[900px] text-[38px] font-extrabold leading-[1.1] tracking-[-0.03em] text-heading sm:text-[48px] md:text-[58px] lg:text-[66px] lg:leading-[1.06]">
-            Agentic AI built with you and for you
+            Agentic AI, engineered side by side with your team
           </h1>
           <p className="mx-auto mb-10 max-w-[620px] text-lg leading-relaxed text-ink-muted">
             Our engineers embed with your team to ship secure, production-ready AI, and then
@@ -92,15 +92,6 @@ export default function Home() {
               See Capabilities
             </PillLink>
           </div>
-        </div>
-        <div className="relative mx-auto mt-14 w-[70vw] overflow-hidden rounded-[20px] border border-line">
-          <img
-            src="/hero-agentic-workflow-diagram.jpg"
-            alt="How an agentic AI workflow works: a user request flows into the agentic core, which plans, acts, and observes in a loop using tools/APIs and memory, before delivering a response."
-            width={1200}
-            height={582}
-            className="block h-auto w-full"
-          />
         </div>
       </section>
 
