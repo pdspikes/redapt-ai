@@ -97,8 +97,8 @@ export default function Home() {
           <img
             src="/hero-agentic-workflow-diagram.jpg"
             alt="How an agentic AI workflow works: a user request flows into the agentic core, which plans, acts, and observes in a loop using tools/APIs and memory, before delivering a response."
-            width={720}
-            height={349}
+            width={1200}
+            height={582}
             className="block h-auto w-full"
           />
         </Reveal>
