@@ -77,15 +77,14 @@ export default function Home() {
         <div className="relative">
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-tint-border bg-tint-bg px-4 py-2 text-[13px] font-bold tracking-[0.02em] text-heading">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-            Introducing Redapt AI
+            Enterprise AI, Built to Last
           </div>
           <h1 className="mx-auto mb-6 max-w-[900px] text-[38px] font-extrabold leading-[1.1] tracking-[-0.03em] text-heading sm:text-[48px] md:text-[58px] lg:text-[66px] lg:leading-[1.06]">
-            Building AI that works securely, continuously, and on solid ground.
+            Agentic AI built with you and for you
           </h1>
           <p className="mx-auto mb-10 max-w-[620px] text-lg leading-relaxed text-ink-muted">
-            You're making AI, cloud, and security decisions that need to work for the next
-            decade, not the next demo. We build alongside your team — then stay in your corner
-            long after.
+            Our engineers embed with your team to ship secure, production-ready AI, and then
+            stay in your corner long after the demo is over.
           </p>
           <div className="flex flex-col items-center justify-center gap-3.5 sm:flex-row">
             <PillLink to="/contact">Start a Discovery Conversation</PillLink>
