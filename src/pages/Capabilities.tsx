@@ -31,8 +31,8 @@ const ROWS = [
     icon: <ShieldCheckIcon className="h-[90px] w-[90px] text-heading" />,
   },
   {
-    title: "Agentic Workflow Automation",
-    body: "Hyperscaler-grade migration, application modernization, and platform engineering across AWS, Azure, and Google Cloud. Designed for optionality, not lock-in.",
+    title: "Sovereign AI Infrastructure",
+    body: "Private, hardware-matched AI infrastructure deployed on-premises, so your models and data stay inside environments you fully control. We handle procurement through deployment, building the compute foundation true sovereignty demands.",
     linkLabel: "Request an Architecture Review →",
     icon: <WorkflowIcon className="h-[90px] w-[90px] text-heading" />,
   },
