@@ -31,8 +31,8 @@ const CAPABILITIES = [
     icon: <ShieldCheckIcon className="h-7 w-7 text-heading" />,
   },
   {
-    title: "Agentic Workflow Automation",
-    body: "AI agents that take action across enterprise systems, not just answer questions. We design, build, and deploy agentic workflows that automate complex processes, surface decisions at the right moment, and operate reliably at scale.",
+    title: "Sovereign AI Infrastructure",
+    body: "We design and deploy private, on-premises AI infrastructure, sized and hardware-matched to your workloads, so your models and data stay inside environments you fully control. From procurement to deployment, we build the compute foundation sovereignty actually requires.",
     icon: <WorkflowIcon className="h-7 w-7 text-heading" />,
   },
   {
@@ -153,7 +153,7 @@ export default function Home() {
 
       <CtaBand
         heading="AI-ready infrastructure, built on every layer of the stack."
-        body="Already know what you need? Request an Architecture Review, Security Resilience Audit, or Data Readiness Workshop."
+        body="Already know what you need? Request an AI Readiness Workshop, Security Resilience Audit, or Data Readiness Workshop."
         tinted
       />
     </>

@@ -143,7 +143,7 @@ export default function Proof() {
 
       <CtaBand
         heading="Decide if Redapt is the right partner for you."
-        body="Request an Architecture Review, Security Resilience Audit, Cloud Cost Governance Assessment, or Data Readiness Workshop."
+        body="Request an AI Readiness Workshop, Security Resilience Audit, Cloud Cost Governance Assessment, or Data Readiness Workshop."
       />
     </>
   );
